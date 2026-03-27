@@ -10,7 +10,7 @@ export default function Footer() {
             NT<span style={{ color: "#3B82F6" }}>.</span>
           </span>
           <span className="text-[#4B6282] text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-            © {new Date().getFullYear()} Nikhel Tiwariy. All rights reserved.
+            © {new Date().getFullYear()} Nikhel Tiwaari. All rights reserved.
           </span>
         </div>
 

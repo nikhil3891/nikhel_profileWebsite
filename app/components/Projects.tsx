@@ -90,11 +90,12 @@ export default function Projects() {
           {projects.map((p, i) => (
             <div
               key={i}
-              className={`relative bg-[#0D1420] rounded-2xl p-6 card-hover flex flex-col ${
+              className={`stagger-item relative bg-[#0D1420] rounded-2xl p-6 card-hover flex flex-col ${
                 p.highlight
                   ? "border border-[#3B82F6]/40 shadow-lg shadow-blue-500/10"
                   : "border border-[#1E2D45]"
               }`}
+              style={{ transitionDelay: `${i * 80}ms` }}
             >
               {p.highlight && (
                 <div className="absolute -top-3 left-4">

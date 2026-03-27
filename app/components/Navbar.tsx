@@ -12,10 +12,26 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("#about");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const sectionIds = links.map((link) => link.href.slice(1));
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      let current = "#about";
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (!section) continue;
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = `#${id}`;
+        }
+      }
+      setActive(current);
+    };
+
+    onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);

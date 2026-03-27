@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nikhel Tiwariy — MERN Stack Developer",
+  title: "Nikhel Tiwaari — MERN Stack Developer",
   description:
     "Full-stack MERN developer with 2.5+ years experience in Node.js, React, React Native & scalable backend systems. Available for hire and freelance.",
   keywords: [
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
     "React Developer",
     "React Native",
     "Backend Developer",
-    "Nikhel Tiwariy",
+    "Nikhel Tiwaari",
     "Full Stack Developer India",
     "Freelance Developer",
   ],
-  authors: [{ name: "Nikhel Tiwariy" }],
+  authors: [{ name: "Nikhel Tiwaari" }],
   openGraph: {
-    title: "Nikhel Tiwariy — MERN Stack Developer",
+    title: "Nikhel Tiwaari — MERN Stack Developer",
     description: "Full-stack MERN developer available for hire and freelance.",
     type: "website",
   },

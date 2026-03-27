@@ -84,10 +84,11 @@ export default function About() {
             { icon: "📱", label: "Also builds", value: "React Native Apps" },
             { icon: "🎓", label: "Education", value: "B.Tech Engineering" },
             { icon: "🌐", label: "Languages", value: "English & Hindi" },
-          ].map((item) => (
+          ].map((item, idx) => (
             <div
               key={item.label}
-              className="bg-[#0D1420] border border-[#1E2D45] rounded-xl p-4 card-hover"
+              className="stagger-item bg-[#0D1420] border border-[#1E2D45] rounded-xl p-4 card-hover"
+              style={{ transitionDelay: `${idx * 70}ms` }}
             >
               <div className="text-2xl mb-2">{item.icon}</div>
               <div

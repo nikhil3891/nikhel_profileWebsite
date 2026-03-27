@@ -87,6 +87,50 @@ body {
   transform: translateY(0);
 }
 
+.fade-in-section .stagger-item {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-in-section.visible .stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lightweight hero motion */
+.hero-blob {
+  animation: heroDrift 14s ease-in-out infinite;
+}
+.hero-blob-delay {
+  animation-delay: 3s;
+}
+.hero-content-reveal {
+  animation: heroReveal 0.8s ease-out both;
+}
+
+@keyframes heroDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.04);
+    opacity: 0.9;
+  }
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Nav link */
 .nav-link {
   position: relative;
@@ -120,3 +164,33 @@ body {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 .form-input::placeholder { color: #4B6282; }
+
+.btn-neo {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-neo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(96, 165, 250, 0.15) 50%, transparent 80%);
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.btn-neo:hover::before {
+  transform: translateX(120%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob,
+  .hero-content-reveal,
+  .fade-in-section,
+  .stagger-item {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
