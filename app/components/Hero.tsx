@@ -111,8 +111,8 @@ export default function Hero() {
         <div className="flex flex-wrap justify-center gap-8 mb-10">
           {[
             { val: "2.5+", label: "Years Exp." },
-            { val: "10+", label: "Projects Built" },
-            { val: "5+", label: "Companies" },
+            { val: "6+", label: "Projects Built" },
+            { val: "4+", label: "Companies" },
             { val: "100%", label: "Committed" },
           ].map((s) => (
             <div key={s.label} className="text-center">
@@ -155,7 +155,7 @@ export default function Hero() {
             LinkedIn ↗
           </a>
           <a
-            href="/Nikhel_Tiwariy_Resume.pdf"
+            href="/Nikhel_Tiwaari_Resume.pdf"
             download
             className="btn-neo px-8 py-3 bg-transparent border border-[#1E2D45] hover:border-[#3B82F6] text-[#8BA3C0] hover:text-white font-semibold rounded-xl transition-all duration-200 hover:-translate-y-0.5"
             style={{ fontFamily: "'DM Sans', sans-serif" }}

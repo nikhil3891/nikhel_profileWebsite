@@ -32,7 +32,7 @@ It showcases experience, projects, skills, contact details, and includes a downl
   - subtle hero glow motion
   - low-cost CSS button sheen effect
 - Resume download button from:
-  - `public/Nikhel_Tiwariy_Resume.pdf`
+  - `public/Nikhel_Tiwaari_Resume.pdf`
 
 ## Project Structure
 
@@ -59,7 +59,7 @@ nikhel_profilewebsite/
 │  └─ models/
 │     └─ Contact.ts             # Mongoose contact schema
 ├─ public/
-│  ├─ Nikhel_Tiwariy_Resume.pdf # downloadable resume
+│  ├─ Nikhel_Tiwaari_Resume.pdf # downloadable resume
 │  └─ *.svg                     # static assets
 ├─ .env.local.example
 ├─ package.json
@@ -152,7 +152,7 @@ Deploy as **Web Service** (not Static Site):
 - Update theme/animations:
   - `app/globals.css`
 - Replace resume:
-  - keep filename as `public/Nikhel_Tiwariy_Resume.pdf`
+  - keep filename as `public/Nikhel_Tiwaari_Resume.pdf`
   - or update the download link in `Hero.tsx`
 
 ## Troubleshooting

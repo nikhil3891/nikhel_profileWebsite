@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import RevealSections from "./components/RevealSections";
 
 export const metadata: Metadata = {
   title: "Nikhel Tiwaari — MERN Stack Developer",
@@ -29,8 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="antialiased">{children}</body>
+    <html lang="en" className="scroll-smooth scroll-pt-24 md:scroll-pt-28">
+      <body className="antialiased">
+        <RevealSections />
+        {children}
+      </body>
     </html>
   );
 }
