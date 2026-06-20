@@ -14,10 +14,11 @@ const projects = [
   },
   {
     title: "Safe EMI Locker",
-    duration: "Ongoing",
+    duration: "4 months",
     description:
-      "Backend system to manage phone feature control for EMI-based device purchases. Tracks device keys, customer records, and access control. Includes e-commerce features for retailer-to-vendor electronics purchase via mobile app.",
-    tags: ["Node.js", "Express.js", "MongoDB", "Admin Panel", "E-commerce", "Device Management", "Retailer Mobile App ", "Distributor Mobile App"],
+      "Complete backend for EMI-based phone feature control — device locks, admin key generation and distribution, retailer access management, and full audit trails. Includes an e-commerce module letting retailers purchase electronics from vendors via mobile app, with vendor delivery management and an admin dashboard. Multi-tenant RBAC keeps data fully isolated per retailer.",
+    tags: ["Node.js", "Express.js", "MongoDB", "AWS S3", "JWT", "RBAC"],
+    badge: "Live",
     link: "https://safeemilocker.com/home",
     highlight: true,
   },
@@ -25,8 +26,19 @@ const projects = [
     title: "Payment Management System",
     duration: "3 months",
     description:
-      "Enterprise payroll backend with Google Drive integration, automated payslip PDF generation, and multi-tenant architecture designed for scalability. Built following SOLID principles.",
-    tags: ["Node.js", "MSSQL", "Knex", "Google Drive API", "Multi-tenant"],
+      "Multi-tenant payroll backend running multiple companies on a single codebase with complete per-tenant data isolation. Google Drive integration and automated payslip PDF generation eliminated manual HR overhead. Worker threads handle CPU-intensive batch payroll computation without blocking the event loop. Built following SOLID principles.",
+    tags: ["Node.js", "MSSQL", "Knex", "Google Drive API", "Worker Threads", "Multi-tenant"],
+    badge: "Client Project",
+    link: null,
+    highlight: false,
+  },
+  {
+    title: "AI-Enhanced VFX Records System",
+    duration: "Radianys Technologies",
+    description:
+      "NestJS APIs for an AI-enhanced VFX video records management system, built to MNC-level code standards with clean architecture. Achieved high Jest test coverage while collaborating with global teams across Agile sprint cycles.",
+    tags: ["NestJS", "Jest", "Clean Architecture", "Agile"],
+    badge: "Enterprise",
     link: null,
     highlight: false,
   },
@@ -34,8 +46,9 @@ const projects = [
     title: "BrainyClock — Attendance System",
     duration: "4 months",
     description:
-      "Global employee attendance management platform with real-time data sync across multiple office locations, department management, and shift scheduling.",
-    tags: ["Node.js", "Express.js", "Real-time", "MongoDB", "REST APIs"],
+      "Real-time attendance, shift and department management across global multi-location offices, with independent multi-tenant data per organisation. Designed the MySQL relational schema for structured attendance records and produced full Swagger documentation for every endpoint.",
+    tags: ["Node.js", "Express.js", "MySQL", "Swagger", "Multi-tenant"],
+    badge: "Client Project",
     link: null,
     highlight: false,
   },
@@ -43,8 +56,9 @@ const projects = [
     title: "Finn Mitra — Fintech Platform",
     duration: "4 months",
     description:
-      "Secure fintech APIs for utility bill payment workflows. Collaborated with frontend teams to optimise API response times and ensure reliable production-grade transactions.",
-    tags: ["Node.js", "Fintech", "Security", "Express.js", "Performance"],
+      "Production-grade fintech APIs for utility bill payments, built for zero-error financial transactions at scale. Optimised API response times via query tuning and secured every endpoint with JWT, Helmet.js and rate limiting — collaborated closely with the frontend team to align API contracts and cut integration bugs.",
+    tags: ["Node.js", "Express.js", "MongoDB", "JWT", "Helmet.js"],
+    badge: "Client Project",
     link: null,
     highlight: false,
   },
@@ -52,8 +66,9 @@ const projects = [
     title: "Weldarc CRM",
     duration: "4 months",
     description:
-      "Customer relationship management backend with lead assignment, tracking, and secure real-time data handling. Improved API response efficiency for business operations.",
-    tags: ["Node.js", "CRM", "REST APIs", "Real-time"],
+      "CRM backend for lead assignment, pipeline tracking and lifecycle management with real-time, JWT-secured data handling. Improved API efficiency through query optimisation and added v1/v2 versioning with structured error responses for reliable frontend integration.",
+    tags: ["Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"],
+    badge: "Client Project",
     link: null,
     highlight: false,
   },
@@ -61,9 +76,10 @@ const projects = [
     title: "Hindu Business Directory",
     duration: "2 months",
     description:
-      "Backend APIs for an Australian platform connecting businesses and individuals. Developed company listing, service management, and user communication features.",
-    tags: ["Node.js", "Express.js", "Directory", "MongoDB"],
-    link: null,
+      "Node.js/Express APIs for an Australian business listing platform connecting companies and individuals — v1/v2 versioned, paginated endpoints built to handle large datasets, covering company listings, service management and user communication.",
+    tags: ["Node.js", "Express.js", "MongoDB", "REST APIs"],
+    badge: "Live",
+    link: "https://hindubusinessdirectory.com.au",
     highlight: false,
   },
 ];
@@ -144,7 +160,11 @@ export default function Projects() {
                     </svg>
                   </a>
                 ) : (
-                  <span className="text-[#1E2D45]">
+                  <span
+                    className="text-[#4B6282] flex-shrink-0"
+                    title="Private client project"
+                    aria-label="Private client project"
+                  >
                     <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                       <path d="M7 11V7a5 5 0 0110 0v4" />
@@ -152,6 +172,20 @@ export default function Projects() {
                   </span>
                 )}
               </div>
+
+              {p.badge && (
+                <span
+                  className="self-start mb-3 px-2 py-0.5 rounded-full text-[10px] font-semibold tracking-wide uppercase"
+                  style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    color: p.badge === "Live" ? "#34D399" : p.badge === "In Progress" ? "#FBBF24" : "#8BA3C0",
+                    backgroundColor: p.badge === "Live" ? "rgba(52,211,153,0.1)" : p.badge === "In Progress" ? "rgba(251,191,36,0.1)" : "rgba(139,163,192,0.1)",
+                    border: `1px solid ${p.badge === "Live" ? "rgba(52,211,153,0.3)" : p.badge === "In Progress" ? "rgba(251,191,36,0.3)" : "rgba(139,163,192,0.2)"}`,
+                  }}
+                >
+                  {p.badge}
+                </span>
+              )}
 
               <p
                 className="text-[#8BA3C0] text-sm leading-relaxed mb-4 flex-1"

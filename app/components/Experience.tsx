@@ -14,7 +14,7 @@ const experiences = [
       "Create comprehensive system design documents and architecture diagrams.",
       "Collaborate with cross-functional teams to align backend architecture with business requirements.",
     ],
-    tags: ["Node.js", "Express.js", "System Design", "MongoDB"],
+    tags: ["Node.js", "Express.js", "System Design", "MongoDB", "Redis", "REST APIs", "MERN Stack", "Agile"],
   },
   {
     title: "Software Engineer",
