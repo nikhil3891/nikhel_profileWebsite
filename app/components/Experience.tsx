@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "MERN Stack Developer",
     company: "Devolyt Technologies Pvt. Ltd.",
-    period: "Dec 2025 – Present",
+    period: "Oct 2025 – Present",
     location: "Greater Noida",
     type: "Full-time",
     current: true,

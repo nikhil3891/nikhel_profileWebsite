@@ -5,7 +5,7 @@ import RevealSections from "./components/RevealSections";
 export const metadata: Metadata = {
   title: "Nikhel Tiwaari — MERN Stack Developer",
   description:
-    "Full-stack MERN developer with 2.5+ years experience in Node.js, React, React Native & scalable backend systems. Available for hire and freelance.",
+    "Full-stack MERN developer with 3+ years experience in Node.js, React, React Native & scalable backend systems. Available for hire and freelance.",
   keywords: [
     "MERN Stack Developer",
     "Node.js Developer",

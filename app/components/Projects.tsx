@@ -3,11 +3,21 @@ import { useEffect, useRef } from "react";
 
 const projects = [
   {
+    title: "TravelSeat – Travel Booking SaaS",
+    duration: "In Development",
+    description:
+      "Multi-tenant SaaS platform for daily commute and long-distance travel seat booking. Modular monolith with dedicated auth, bus, booking, payment, notification and tenant modules. Redis-based seat locking prevents double bookings, BullMQ handles async email/SMS/invoice generation, and JWT+RBAC secures admin, operator and passenger roles.",
+    tags: ["Node.js", "Express.js", "MongoDB", "Redis", "BullMQ", "JWT", "RBAC", "AWS S3"],
+    badge: "In Progress",
+    link: null,
+    highlight: false,
+  },
+  {
     title: "Safe EMI Locker",
     duration: "Ongoing",
     description:
       "Backend system to manage phone feature control for EMI-based device purchases. Tracks device keys, customer records, and access control. Includes e-commerce features for retailer-to-vendor electronics purchase via mobile app.",
-    tags: ["Node.js", "Express.js", "MongoDB", "Admin Panel", "E-commerce"],
+    tags: ["Node.js", "Express.js", "MongoDB", "Admin Panel", "E-commerce", "Device Management", "Retailer Mobile App ", "Distributor Mobile App"],
     link: "https://safeemilocker.com/home",
     highlight: true,
   },
@@ -90,11 +100,10 @@ export default function Projects() {
           {projects.map((p, i) => (
             <div
               key={i}
-              className={`stagger-item relative bg-[#0D1420] rounded-2xl p-6 card-hover flex flex-col ${
-                p.highlight
+              className={`stagger-item relative bg-[#0D1420] rounded-2xl p-6 card-hover flex flex-col ${p.highlight
                   ? "border border-[#3B82F6]/40 shadow-lg shadow-blue-500/10"
                   : "border border-[#1E2D45]"
-              }`}
+                }`}
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               {p.highlight && (
@@ -129,16 +138,16 @@ export default function Projects() {
                     aria-label="Live link"
                   >
                     <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
-                      <polyline points="15 3 21 3 21 9"/>
-                      <line x1="10" y1="14" x2="21" y2="3"/>
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
                     </svg>
                   </a>
                 ) : (
                   <span className="text-[#1E2D45]">
                     <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                      <path d="M7 11V7a5 5 0 0110 0v4"/>
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                      <path d="M7 11V7a5 5 0 0110 0v4" />
                     </svg>
                   </span>
                 )}

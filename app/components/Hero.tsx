@@ -102,7 +102,7 @@ export default function Hero() {
           className="text-[#8BA3C0] text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
-          2.5+ years crafting scalable backend systems, RESTful APIs, and
+          3+ years crafting scalable backend systems, RESTful APIs, and
           full-stack applications. From fintech to CRM — turning ideas into
           production-grade software.
         </p>
@@ -110,7 +110,7 @@ export default function Hero() {
         {/* Stats row */}
         <div className="flex flex-wrap justify-center gap-8 mb-10">
           {[
-            { val: "2.5+", label: "Years Exp." },
+            { val: "3+", label: "Years Exp." },
             { val: "6+", label: "Projects Built" },
             { val: "4+", label: "Companies" },
             { val: "100%", label: "Committed" },

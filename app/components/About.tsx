@@ -35,7 +35,7 @@ export default function About() {
             className="text-[#8BA3C0] mb-4 leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            I&apos;m a MERN Stack Developer based in Greater Noida, India with 2.5+ years of
+            I&apos;m a MERN Stack Developer based in Greater Noida, India with 3+ years of
             experience designing and building production-grade applications. My core strength
             lies in Node.js backend architecture — crafting scalable REST APIs, multi-tenant
             systems, and database-optimised services.
