@@ -28,7 +28,7 @@ const experiences = [
       "Wrote and executed unit tests using Jest to ensure high code quality and reliability.",
       "Collaborated with global teams following MNC-level best practices for performance and security.",
     ],
-    tags: ["NestJS", "TypeScript", "Jest", "REST APIs"],
+    tags: ["NestJS", "TypeScript", "Jest", "REST APIs", "Agile", "Unit Testing"],
   },
   {
     title: "Junior Node.js Developer",
