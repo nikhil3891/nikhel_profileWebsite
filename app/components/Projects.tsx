@@ -3,14 +3,14 @@ import { useEffect, useRef } from "react";
 
 const projects = [
   {
-    title: "TravelSeat – Travel Booking SaaS",
+    title: "RoadPass — Multi-Tenant Bus Booking SaaS",
     duration: "In Development",
     description:
-      "Multi-tenant SaaS platform for daily commute and long-distance travel seat booking. Modular monolith with dedicated auth, bus, booking, payment, notification and tenant modules. Redis-based seat locking prevents double bookings, BullMQ handles async email/SMS/invoice generation, and JWT+RBAC secures admin, operator and passenger roles.",
-    tags: ["Node.js", "Express.js", "MongoDB", "Redis", "BullMQ", "JWT", "RBAC", "AWS S3"],
+      "RoadPass is a multi-tenant bus-booking SaaS platform for operators and travel companies. Dockerized backend with Redis-backed seat locking, BullMQ job queues, JWT auth and admin/operator/customer dashboards built with Next.js and React.",
+    tags: ["Node.js", "Express.js", "MongoDB", "Redis", "BullMQ", "JWT", "Next.js", "React Native"],
     badge: "In Progress",
-    link: null,
-    highlight: false,
+    link: "https://bus-booking-users-page.vercel.app",
+    highlight: true,
   },
   {
     title: "Safe EMI Locker",
@@ -33,10 +33,10 @@ const projects = [
     highlight: false,
   },
   {
-    title: "AI-Enhanced VFX Records System",
-    duration: "Radianys Technologies",
+    title: "VFX Records System",
+    duration: "Enterprise",
     description:
-      "NestJS APIs for an AI-enhanced VFX video records management system, built to MNC-level code standards with clean architecture. Achieved high Jest test coverage while collaborating with global teams across Agile sprint cycles.",
+      "Built NestJS APIs for a VFX video records management system with clean architecture and high Jest test coverage while collaborating across global teams.",
     tags: ["NestJS", "Jest", "Clean Architecture", "Agile"],
     badge: "Enterprise",
     link: null,

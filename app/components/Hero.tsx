@@ -1,7 +1,11 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-const roles = ["MERN Stack Developer", "Node.js Backend Engineer", "React & React Native Dev", "API Architect"];
+const roles = [
+  "Full-Stack MERN Developer | Node.js • React.js • Next.js • NestJS | 3+ Years Experience",
+  "Founder-Engineer — RoadPass",
+  "API Architect & Backend Specialist",
+];
 
 export default function Hero() {
   const roleRef = useRef<HTMLSpanElement>(null);
@@ -82,10 +86,7 @@ export default function Hero() {
           className="text-5xl md:text-7xl font-extrabold text-white mb-4 leading-tight"
           style={{ fontFamily: "'Syne', sans-serif" }}
         >
-          Nikhel{" "}
-          <span className="text-glow" style={{ color: "#3B82F6" }}>
-            Tiwaari
-          </span>
+          NIKHIL TIWARI
         </h1>
 
         {/* Typewriter role */}
@@ -102,9 +103,9 @@ export default function Hero() {
           className="text-[#8BA3C0] text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
-          3+ years crafting scalable backend systems, RESTful APIs, and
-          full-stack applications. From fintech to CRM — turning ideas into
-          production-grade software.
+          Full-Stack MERN Developer with 3+ years building production-grade,
+          multi-tenant SaaS applications — Node.js, NestJS, MongoDB, Redis, and
+          React-based frontends.
         </p>
 
         {/* Stats row */}
