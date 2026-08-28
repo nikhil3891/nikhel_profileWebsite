@@ -25,41 +25,39 @@ export default function About() {
             // about me
           </p>
           <h2
-            className="text-4xl font-bold text-white mb-6"
+            className="text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
-            Turning complex problems into<br />
-            <span style={{ color: "#3B82F6" }}>elegant solutions</span>
+            NIKHIL TIWARI
           </h2>
+          <div className="text-[#60A5FA] font-mono mb-4" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+            Full-Stack MERN Developer | Node.js • React.js • Next.js • NestJS | 3+ Years Experience
+          </div>
           <p
             className="text-[#8BA3C0] mb-4 leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            I&apos;m a MERN Stack Developer based in Greater Noida, India with 3+ years of
-            experience designing and building production-grade applications. My core strength
-            lies in Node.js backend architecture — crafting scalable REST APIs, multi-tenant
-            systems, and database-optimised services.
+            Full-Stack MERN Developer with 3+ years of experience architecting and delivering
+            production-grade, multi-tenant SaaS applications using Node.js, Express.js, NestJS, MongoDB,
+            Redis and React.js. Shipped 249+ REST APIs across fintech, payroll, CRM and e-commerce
+            platforms, with hands-on expertise in JWT/RBAC security, API versioning, BullMQ job queues
+            and database optimisation.
           </p>
           <p
             className="text-[#8BA3C0] mb-6 leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Beyond backend, I work confidently across the full stack with React.js and
-            React Native, allowing me to own features end-to-end. I&apos;ve worked across
-            fintech, CRM, attendance management, and business directory platforms —
-            always focused on clean code and real impact.
+            Currently founder-engineer of RoadPass — a multi-tenant bus-booking SaaS platform. I
+            authored the BRD and am building the Dockerized backend, operator/admin dashboards and
+            customer web & mobile apps in parallel.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 items-center">
             <a
               href="mailto:8.nikhil3@gmail.com"
               className="inline-flex items-center gap-2 text-sm text-[#60A5FA] hover:text-white transition-colors"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              8.nikhil3@gmail.com
+              ✉️ 8.nikhil3@gmail.com
             </a>
             <span className="text-[#1E2D45]">|</span>
             <a
@@ -67,21 +65,32 @@ export default function About() {
               className="inline-flex items-center gap-2 text-sm text-[#60A5FA] hover:text-white transition-colors"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.13 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-              +91 9625905712
+              📞 +91-9625905712
             </a>
+            <span className="text-[#1E2D45]">|</span>
+            <span className="text-sm text-[#8BA3C0]">Greater Noida, India</span>
+            <span className="text-[#1E2D45]">|</span>
+            <a href="https://linkedin.com/in/nikhil-tiwari-n1991" className="text-sm text-[#60A5FA] hover:text-white">LinkedIn</a>
+            <span className="text-[#1E2D45]">|</span>
+            <a href="https://github.com/nikhil3891" className="text-sm text-[#60A5FA] hover:text-white">GitHub</a>
+          </div>
+          <div className="mt-4">
+            <div className="text-xs text-[#4B6282] mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>Selected live projects</div>
+            <ul className="list-disc list-inside text-[#8BA3C0]">
+              <li><a href="https://bus-booking-users-page.vercel.app" className="text-[#60A5FA] hover:underline">RoadPass — Customer Web</a></li>
+              <li><a href="https://operator-page-dashboard.vercel.app" className="text-[#60A5FA] hover:underline">RoadPass — Operator Dashboard</a></li>
+              <li><a href="https://safeemilocker.com" className="text-[#60A5FA] hover:underline">Safe EMI Locker</a></li>
+            </ul>
           </div>
         </div>
 
         {/* Right: info cards */}
         <div className="grid grid-cols-2 gap-4">
           {[
-            { icon: "🏢", label: "Current Role", value: "MERN Stack Dev @ Devolyt" },
+            { icon: "🏢", label: "Current Role", value: "Founder-Engineer — RoadPass" },
             { icon: "📍", label: "Location", value: "Greater Noida, India" },
-            { icon: "⚡", label: "Expertise", value: "Node.js & Express" },
-            { icon: "📱", label: "Also builds", value: "React Native Apps" },
+            { icon: "⚡", label: "Expertise", value: "Node.js, NestJS, Express" },
+            { icon: "📱", label: "Also builds", value: "React.js, Next.js, React Native" },
             { icon: "🎓", label: "Education", value: "B.Tech Engineering" },
             { icon: "🌐", label: "Languages", value: "English & Hindi" },
           ].map((item, idx) => (

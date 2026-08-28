@@ -3,24 +3,39 @@ import { useEffect, useRef } from "react";
 
 const skillGroups = [
   {
+    category: "Languages",
+    icon: "🧾",
+    skills: ["JavaScript (ES6+)", "TypeScript"],
+  },
+  {
     category: "Backend",
     icon: "⚙️",
-    skills: ["Node.js", "Express.js", "NestJS", "REST APIs", "System Design", "Redis"],
+    skills: ["Node.js", "Express.js", "NestJS", "REST API Design", "Worker Threads", "Redis" , "BullMQ"],
   },
   {
     category: "Frontend",
     icon: "🖥️",
-    skills: ["React.js", "React Native", "HTML5", "CSS3 / Tailwind", "TypeScript", "EJS"],
+    skills: ["React.js", "Next.js", "React Native", "Tailwind CSS", "HTML5", "CSS3"],
   },
   {
-    category: "Databases",
+    category: "Databases & ORM",
     icon: "🗄️",
-    skills: ["MongoDB", "Mongoose", "SQL / MSSQL", "Sequelize", "Knex ORM"],
+    skills: ["MongoDB", "MySQL", "MSSQL", "PostgreSQL", "Redis", "Prisma", "Knex"],
   },
   {
-    category: "Tools & DevOps",
-    icon: "🛠️",
-    skills: ["Git / GitHub", "Postman", "Swagger", "JIRA", "Jest (Unit Testing)", "Nodemailer"],
+    category: "Cloud & DevOps",
+    icon: "☁️",
+    skills: ["AWS S3", "AWS EC2", "Docker", "Google Drive API"],
+  },
+  {
+    category: "Security & Auth",
+    icon: "🔒",
+    skills: ["JWT", "OAuth", "RBAC", "bcrypt", "Helmet.js"],
+  },
+  {
+    category: "Testing & Tools",
+    icon: "🧪",
+    skills: ["Jest", "Postman", "Swagger/OpenAPI", "Git/GitHub", "JIRA", "BullMQ", "Socket.IO"],
   },
 ];
 

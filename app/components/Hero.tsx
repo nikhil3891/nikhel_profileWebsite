@@ -1,7 +1,11 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-const roles = ["MERN Stack Developer", "Node.js Backend Engineer", "React & React Native Dev", "API Architect"];
+const roles = [
+  "Full-Stack MERN Developer | Node.js • React.js • Next.js • NestJS | 3+ Years Experience",
+  "Founder-Engineer — RoadPass",
+  "API Architect & Backend Specialist",
+];
 
 export default function Hero() {
   const roleRef = useRef<HTMLSpanElement>(null);
@@ -82,10 +86,7 @@ export default function Hero() {
           className="text-5xl md:text-7xl font-extrabold text-white mb-4 leading-tight"
           style={{ fontFamily: "'Syne', sans-serif" }}
         >
-          Nikhel{" "}
-          <span className="text-glow" style={{ color: "#3B82F6" }}>
-            Tiwaari
-          </span>
+          NIKHIL TIWARI
         </h1>
 
         {/* Typewriter role */}
@@ -102,18 +103,18 @@ export default function Hero() {
           className="text-[#8BA3C0] text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
-          3+ years crafting scalable backend systems, RESTful APIs, and
-          full-stack applications. From fintech to CRM — turning ideas into
-          production-grade software.
+          Full-Stack MERN Developer with 3+ years building production-grade,
+          multi-tenant SaaS applications — Node.js, NestJS, MongoDB, Redis, and
+          React-based frontends.
         </p>
-
-        {/* Stats row */}
-        <div className="flex flex-wrap justify-center gap-8 mb-10">
-          {[
-            { val: "3+", label: "Years Exp." },
-            { val: "6+", label: "Projects Built" },
-            { val: "4+", label: "Companies" },
-            { val: "100%", label: "Committed" },
+          <a
+            href="/Nikhil_Tiwari_Resume_26-8-2026.pdf"
+            download
+            className="btn-neo px-8 py-3 bg-transparent border border-[#1E2D45] hover:border-[#3B82F6] text-[#8BA3C0] hover:text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/25 hover:-translate-y-0.5"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            Download Resume
+          </a>
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div
